@@ -4,15 +4,15 @@ describe('Bank app', () => {
   const name = 'Hermoine Granger';
   const accountNumber = '1001';
   const anotherAccount = '1002';
-  const defaultBalance = `${5096}`;
+  const defaultBalance = '5096';
   const currency = 'Dollar';
-  const depositAmount = `${200}`;
+  const depositAmount = '200';
   const successMessageDeposit = 'Deposit Successful';
-  const newBalance = depositAmount + defaultBalance;
+  const newBalance = +depositAmount + +defaultBalance;
   const newBalanceString = newBalance.toString();
-  const withdrawAmount = `${100}`;
+  const withdrawAmount = '100';
   const successMessageWithdawl = 'Transaction successful';
-  const balance = newBalance - withdrawAmount;
+  const balance = +newBalance - +withdrawAmount;
   before(() => {
     cy.visit('/');
   });
